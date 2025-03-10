@@ -1,4 +1,4 @@
-name: Basic Functionality Test
+name: PR1240
 
 on:
   workflow_dispatch:
@@ -16,7 +16,7 @@ jobs:
       - uses: marco-ippolito/setup-node@mirror
         with:
           node-version: '22'
-          mirror: 'https://nodejs.org/'
+          mirror: 'https://nodejs.org/dist/'
           mirror-token: ${{secrets.GITHUB_TOKEN}}
       - name: Verify Node.js installation
         run: node -v    
@@ -34,7 +34,7 @@ jobs:
       - uses: marco-ippolito/setup-node@mirror
         with:
           node-version: '23'
-          mirror: 'https://nodejs.org/'
+          mirror: 'https://nodejs.org/dist/'
           mirror-token: ${{secrets.GITHUB_TOKEN}}
       - name: Verify Node.js installation
         run: node -v    
